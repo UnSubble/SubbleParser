@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Properties>
+        <Property name="path">./logs</Property>
+    </Properties>
 
+    <Appenders>
+        <RollingFile name="logToFile" fileName="${path}/errors-log.log" filePattern="${path}/errors-log-%i.log">
+            <PatternLayout pattern="-%-d{dd-MM-yyyy} [%p] %c [MESSAGE]=%m%n" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="7 KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="4" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="parser" additivity="true" level="INFO">
+            <AppenderRef ref="logToFile" />
+        </Logger>
+    </Loggers>
+</Configuration>
