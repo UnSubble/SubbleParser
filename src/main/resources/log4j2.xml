@@ -15,8 +15,8 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="parser" additivity="true" level="INFO">
+        <Root>
             <AppenderRef ref="logToFile" />
-        </Logger>
+        </Root>
     </Loggers>
 </Configuration>
