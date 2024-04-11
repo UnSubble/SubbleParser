@@ -1,12 +1,9 @@
 package generics;
 
-import java.util.Optional;
+public interface Node<K, V> {
 
-public interface Node {
+    K getKey();
 
-    <T> T getValueAs(Class<T> clazz);
-
-    <T> Optional<T> tryGetValueAs(Class<T> clazz);
-
+    V getValue();
 
 }
