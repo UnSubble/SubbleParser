@@ -1,4 +1,4 @@
-package generics;
+package com.unsubble.generics;
 
 import java.util.Iterator;
 

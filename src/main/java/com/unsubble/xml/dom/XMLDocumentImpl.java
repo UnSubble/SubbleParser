@@ -1,9 +1,7 @@
-package xml;
+package com.unsubble.xml.dom;
 
-import generics.Node;
-import generics.ParseIterator;
-import xml.dom.Element;
-import xml.dom.XMLNode;
+import com.unsubble.generics.Node;
+import com.unsubble.generics.ParseIterator;
 
 import java.nio.charset.Charset;
 

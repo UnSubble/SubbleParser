@@ -6,23 +6,23 @@
 
     <Appenders>
         <RollingFile name="logToFile" fileName="${path}/errors-log.log" filePattern="${path}/errors-log-%i.log">
-            <PatternLayout pattern="-%d{dd-MM-yyyy} [%p] %c [MESSAGE]=%m%n" />
+            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%p] %c [MESSAGE]=%m%n" />
             <Policies>
                 <SizeBasedTriggeringPolicy size="7 KB" />
             </Policies>
             <DefaultRolloverStrategy max="4" />
         </RollingFile>
         <Console name="logToConsole" target="SYSTEM_OUT">
-            <PatternLayout pattern="[%d{yyyy-MM-dd}]: %m%n" />
+            <PatternLayout pattern="[%d{HH:mm:ss}] [%c]: %m%n" />
         </Console>
     </Appenders>
 
     <Loggers>
-        <Root>
-            <AppenderRef ref="logToFile" />
-        </Root>
-        <Logger name="main" additivity="true" level="INFO">
+        <Logger name="com.unsubble" level="DEBUG" additivity="false">
             <AppenderRef ref="logToConsole" />
         </Logger>
+        <Root level="WARN">
+            <AppenderRef ref="logToFile"/>
+        </Root>
     </Loggers>
 </Configuration>

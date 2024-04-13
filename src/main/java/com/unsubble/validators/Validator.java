@@ -1,4 +1,4 @@
-package validators;
+package com.unsubble.validators;
 
 public interface Validator {
 

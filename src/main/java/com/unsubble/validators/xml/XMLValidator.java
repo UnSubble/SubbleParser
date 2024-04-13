@@ -1,6 +1,6 @@
-package validators.xml;
+package com.unsubble.validators.xml;
 
-import validators.Validator;
+import com.unsubble.validators.Validator;
 
 public final class XMLValidator implements Validator {
     @Override
