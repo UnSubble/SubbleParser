@@ -15,6 +15,9 @@
         <log4j.core.version>2.23.1</log4j.core.version>
         <assetrj.core.version>3.25.3</assetrj.core.version>
         <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <snakeyaml.version>2.2</snakeyaml.version>
+
+
     </properties>
 
     <build>
@@ -24,6 +27,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
             </plugin>
+
         </plugins>
     </build>
 
@@ -47,6 +51,19 @@
             <version>${assetrj.core.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.33</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
+
 
     </dependencies>
 </project>
