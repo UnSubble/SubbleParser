@@ -16,8 +16,9 @@ public final class XMLDeclarationParser {
          */
         byte tagCount = 0;
         StringBuilder builder = new StringBuilder();
-        char next;
-        while ((next = (char) reader.read()) > 0) {
+        int nextInt;
+        while ((nextInt =  reader.read()) > 0) {
+            char next=(char) nextInt;
             if (next <= 31)
                 continue;
             if (attrValue == '\0') {
